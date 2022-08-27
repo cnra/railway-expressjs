@@ -8,8 +8,11 @@ app.use(bodyParser.json());
 app.use(bodyParser.raw({ type: "application/vnd.custom-type" }));
 app.use(bodyParser.text({ type: "text/html" }));
 
+let counter = 0;
+
 app.get("/", async (req, res) => {
-  res.json({ Hello: "World 4" });
+  counter++
+  res.json({ Hello: "World " + counter });
 });
 
 app.listen(port, () => {
