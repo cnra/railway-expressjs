@@ -12,7 +12,7 @@ let counter = 0;
 
 app.get("/", async (req, res) => {
   counter++
-  res.json({ Hello: "World " + counter });
+  res.json({ Hello: "World 2" + counter });
 });
 
 app.listen(port, () => {
